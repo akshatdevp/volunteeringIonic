@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar><ion-buttons slot="start">
+    <ion-back-button
+    text="">
+</ion-back-button></ion-buttons>
+    <ion-title>event-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+    {{currEvent.name}}
+  </ion-card-header>
+    <ion-card-content>
+      {{currEvent.description}}
+      <br>
+      <ion-button *ngIf = "isVolAssigned" fill = "clear" (click) = "checkAndAssign()">
+          Register
+      </ion-button>
+      <ion-button *ngIf = "!isVolAssigned" fill = "clear" (click) = "checkAndAssign()">
+        Deregister
+    </ion-button>
+    <br><br>
+    <ion-icon
+  (click)="toggleLike()"
+  [name] = "isLiked?'heart':'heart-outline'"
+  [style.color]="'#EF3B51'"
+  size = "large">
+</ion-icon>
+<ion-label>
+  {{likes}}
+</ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header >Skills required</ion-list-header>
+    <ion-item *ngFor = "let skill of required_skills">
+      <ion-label [color] = "isVolSkilled(skill)" style = "font-weight: bold;">
+          {{skill}}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

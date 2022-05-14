@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div id = "profileImage" >{{this.imageText}}</div>
+  <ion-label> Name </ion-label><ion-item>{{this.volunteer.name}}</ion-item>
+  <ion-label> Activities completed </ion-label><ion-item>{{this.completedEvents}}</ion-item>
+  <ion-label>Skills</ion-label>
+  <ion-item *ngFor = "let skill of this.volunteer.skills" [[(ngModel)]="this.volunteer.skills">
+    <ion-label >
+        {{skill}}
+    </ion-label>
+    <ion-button (click) = "removeSkill(skill)" fill = "clear"><ion-icon slot="end" name = "trash"></ion-icon></ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Add skills </ion-label>
+    <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+      <ion-select-option *ngFor = "let skill of this.allSkills">{{skill}}</ion-select-option>
+    </ion-select>
+    </ion-item>
+     -->
+
+    <div class="container">
+
+      <form>
+        <ion-label for="name">name</ion-label>
+        <ion-item>
+
+              <ion-input type="text"  id="name" name="name" [(ngModel)]="user.name" required="true"></ion-input>
+        </ion-item>
+        <ion-label for="orgName">orgName</ion-label>
+        <ion-item >
+
+          <ion-input type="text"  id="orgName" name="orgName" [(ngModel)]="ampVol.orgName"></ion-input>
+        </ion-item>
+        <ion-label for="role">role</ion-label>
+        <ion-item>
+
+          <ion-input type="text"  id="role" name="role" [(ngModel)]="ampVol.role"></ion-input>
+        </ion-item>
+
+        <ion-label for="name">gender</ion-label>
+        <ion-item>
+          <ion-input type="text"  id="gender" name="gender" [(ngModel)]="ampVol.gender" placeholder= "Male/Female/Other"></ion-input>
+        </ion-item>
+        <ion-label for="phone_number">phone number</ion-label>
+        <ion-item>
+          <ion-input type="text"  id="phone_number" name="phone_number" [(ngModel)]="user.phone_number"></ion-input>
+
+        </ion-item>
+        <ion-label for="birthdate">birthdate</ion-label>
+          <ion-item>
+            <ion-input type="date"  id="birthdate" name="birthdate" [(ngModel)]="user.birthdate"></ion-input>
+          </ion-item>
+
+        <div>
+          <div class="col-sm-3">
+            <ion-button type="submit"  (click)="updateProfile()">Save</ion-button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+</ion-content>
+
+
+<!--
+birthdate: "2022-04-26"
+email: "  "
+email_verified: true
+name: "Akshat"
+phone_number: "+581231231"
+phone_number_verified: false -->

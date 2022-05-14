@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ugcdashboard-dev-214920-authRole",
+      "UnauthRoleArn": "arn:aws:iam::517576217890:role/amplify-ugcdashboard-dev-214920-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::517576217890:role/amplify-ugcdashboard-dev-214920-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-ugcdashboard-dev-214920-deployment",
+      "UnauthRoleName": "amplify-ugcdashboard-dev-214920-unauthRole",
+      "StackName": "amplify-ugcdashboard-dev-214920",
+      "StackId": "arn:aws:cloudformation:ap-south-1:517576217890:stack/amplify-ugcdashboard-dev-214920/499f5e40-cd58-11ec-bbae-061a2049d058",
+      "AmplifyAppId": "d1umn97qrg3e83",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-ugcdashboard-dev-214920-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "ugcdashboard": {}
+      },
+      "function": {
+        "AdminQueries91b3337e": {
+          "deploymentBucketName": "amplify-ugcdashboard-dev-214920-deployment",
+          "s3Key": "amplify-builds/AdminQueries91b3337e-364d53304e734341614d-build.zip"
+        },
+        "ugcdashboardPostConfirmation": {
+          "deploymentBucketName": "amplify-ugcdashboard-dev-214920-deployment",
+          "s3Key": "amplify-builds/ugcdashboardPostConfirmation-506941486f4e6f4c3769-build.zip"
+        }
+      }
+    }
+  }
+}

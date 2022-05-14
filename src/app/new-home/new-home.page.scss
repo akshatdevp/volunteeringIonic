@@ -1,0 +1,34 @@
+img{
+  height : auto;
+  width : 40px;
+}
+.ion-no-border{
+  margin :30px
+  // justify-content: center;
+}
+ion-card{
+  text-align: left;
+  background-image : url("../../assets/img/img3.png");
+  //background-repeat: no-repeat;
+  height :auto;
+  width : 300px;
+  border-radius: 20px;
+}
+
+.ion-card-1{
+  background-image : url("../../assets/img/img2.png");
+}
+ion-header{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+ion-card-subtitle,ion-card-content,ion-card-header,ion-card-title{
+  color : azure;
+
+}
+
+span{
+  white-space:nowrap;
+
+}

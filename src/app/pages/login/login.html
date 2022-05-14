@@ -1,0 +1,50 @@
+
+  <div class="banner">
+    <span class="mask bg-gradient-info opacity-3"></span>
+    <div class="content">
+      <div class="row">
+        <div class="col-md-7"></div>
+        <div class="col-md-5 login-card">
+          <amplify-authenticator [services]="services">
+  
+            <ng-template
+              amplifySlot="sign-in-header">
+  
+              <div class="amplify-heading">
+                <h1 class="display-3">Welcome back!</h1>
+                <p>Enter your email and password sign-in to UW Dashboard.</p>  
+              </div>
+            </ng-template>
+  
+            <ng-template
+              amplifySlot="sign-up-header">
+  
+              <div class="amplify-heading">
+                <h1 class="display-3">Create an account.</h1>
+                <p>Volunteer now and help us improve lives by mobilizing the caring power of the communities to create long-term social change and advance towards common good.</p>
+              </div>
+            </ng-template>
+  
+            <!-- sign-up-field override -->
+            <ng-template
+              amplifySlot="sign-up-form-fields"
+              let-validationErrors="validationErrors">
+  
+              <!-- Re-use default `Authenticator.SignUp.FormFields` -->
+              <amplify-sign-up-form-fields></amplify-sign-up-form-fields>
+        
+              <!-- Append & require Terms & Conditions field to sign up -->
+              <amplify-checkbox
+                [errorMessage]="validationErrors.acknowledgement"
+                [hasError]="!!validationErrors.acknowledgement"
+                name="acknowledgement"
+                value="yes">
+                I agree with the Terms & Conditions
+              </amplify-checkbox>
+            </ng-template>
+          </amplify-authenticator>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,36 @@
+type Subscriptions @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  eventId: ID
+  volunteerId: ID
+  registered: Boolean
+  interested: Boolean
+  viewed: Boolean
+  attended: Boolean
+}
+
+type Volunteer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  orgName: String
+  role: String
+  preferences: AWSJSON
+  log: AWSJSON
+  gender: String
+  skillset: [String]
+  interests: [String]
+  profileCompleted: Boolean
+}
+
+type Event @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  description: String
+  startDateTime: AWSDateTime
+  mobile: AWSPhone
+  duration: Float
+  skillset: [String]
+  perks: [String]
+  tags: [String]
+  guidelines: [String]
+  meetingLink: String
+  social: AWSJSON
+} 
